@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+
+class Mayor4Numeros2 {
+private:
+    float numA, numB, numC, numD, nuMayor;
+
+public:
+    // Métodos para establecer los valores
+    void establecerNumA(float valor) {
+        numA = valor;
+    }
+
+    void establecerNumB(float valor) {
+        numB = valor;
+    }
+
+    void establecerNumC(float valor) {
+        numC = valor;
+    }
+
+    void establecerNumD(float valor) {
+        numD = valor;
+    }
+
+    // Método para calcular el número mayor
+    void calcularNuMayor() {
+        if (numA > numB && numA > numC && numA > numD) {
+            nuMayor = numA;
+        } else if (numB > numA && numB > numC && numB > numD) {
+            nuMayor = numB;
+        } else if (numC > numA && numC > numB && numC > numD) {
+            nuMayor = numC;
+        } else {
+            nuMayor = numD;
+        }
+    }
+
+    // Método para obtener el número mayor
+    float obtenerNuMayor() {
+        return nuMayor;
+    }
+};
+
+int main() {
+    // Crear una instancia de la clase
+    Mayor4Numeros2 mayor;
+
+    // Variables para almacenar los números ingresados por el usuario
+    float a, b, c, d;
+
+    // Solicitar los números al usuario
+    cout << "Ingrese el primer numero: ";
+    cin >> a;
+    cout << "Ingrese el segundo numero: ";
+    cin >> b;
+    cout << "Ingrese el tercer numero: ";
+    cin >> c;
+    cout << "Ingrese el cuarto numero: ";
+    cin >> d;
+
+    // Establecer los valores en la instancia
+    mayor.establecerNumA(a);
+    mayor.establecerNumB(b);
+    mayor.establecerNumC(c);
+    mayor.establecerNumD(d);
+
+    // Calcular el número mayor
+    mayor.calcularNuMayor();
+
+    // Mostrar el resultado
+    cout << "El numero mayor es: " << mayor.obtenerNuMayor() << endl;
+
+    return 0;
+}
