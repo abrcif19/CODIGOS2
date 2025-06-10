@@ -82,3 +82,38 @@ int* piVar
 double dVar = 10.0 :
 double* pdVar:
 piVar = (int*)pdVar:
+
+// displayArray display the members of an array, of length nhize
+
+void displayArray(int intArray[], int nSize)
+
+cout << "The value of the array is:\n":
+
+for(int n; n <nSize>: n++)
+
+cout << n << ": " << intArray[n] << "\n";
+
+cout << "\n";
+// displayArray display the members of an
+
+//      array of length nSize
+
+void displayArray(int intArray[], int nSize)
+
+cout << "The value of the array is:\n":
+
+int* pArray intArray:
+
+for(int n = 0; n < nSize; n++, pArray++)
+
+{
+
+cout << n << ": << *pArray << "\n";
+{
+cout << "\n";
+
+}
+xlkxlldklkkds kskks as d s  dkkaksw asd awsd new d d wskjewedieeolwod
+
+
+
