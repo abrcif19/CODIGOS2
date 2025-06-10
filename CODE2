@@ -1,28 +1,51 @@
+#include <cstdio>
+
+#include <cstdlib>
+
 #include <iostream>
-using namespace std;
 
-int main(int nNumberofArgs, char* pszArgs[]) {
-    int upper = 0;
-    int n = 0;
-    int lower = 0;
+using namespace std:
 
-    // Mostrar valores iniciales
-    cout << "The initial values are:" << endl;
-    cout << "upper = " << upper << endl;
-    cout << "n     = " << n << endl;
-    cout << "lower = " << lower << endl;
+int main(int nNumberofArgs. char* pszArgs[])
 
-    // Ahora almacenar un double en la dirección de un int
-    cout << "\nStoring 13.0 into the location &n" << endl;
+1
 
-    double* pD = (double*)&n;
-    *pD = 13.0;
+int upper 0:
 
-    // Mostrar valores finales
-    cout << "\nThe final results are:" << endl;
-    cout << "upper = " << upper << endl;
-    cout << "n     = " << n << endl;
-    cout << "lower = " << lower << endl;
+int
 
-    return 0;
-}
+n - 0:
+
+int
+
+lower 0:
+
+// output the values of the three variables before...
+
+cout << "the initial values are" << endl;
+
+cout << "upper = " << upper << endl;
+
+cout << "n  = " << endl;
+
+cout << "lower = " << lower << endl;
+
+// now store a double into the space
+
+// allocated for an int
+
+cout << "\nStoring 13.0 into the location &n" << endl;
+
+double* pD (double*)&n:
+
+*p0 13.0:
+
+// display the results
+
+cout << "\nThe final results are:" << endl;
+
+cout << "upper  =" * << upper << endl;
+
+cout << "n.  =" "<<n << endl;
+
+cout << "lower   =""<< lower << endl;
