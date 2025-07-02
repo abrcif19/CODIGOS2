@@ -1,1 +1,132 @@
+#include <cstdio>
+#include <cmath> 
 
+class Figura {
+protected:
+    char nombre[20];
+public:
+    Figura(const char* n) {
+        sprintf(nombre, "%s", n);
+    }
+    virtual double calcularVolumen() const = 0;
+};
+
+class Cubo : public Figura {
+private:
+    double arista;
+public:
+    Cubo() : Figura("Cubo"), arista(0) {}
+    void setArista(double a) { arista = a; }
+    double calcularVolumen() const override { return arista * arista * arista; }
+};
+
+class Cilindro : public Figura {
+private:
+    double radio, altura;
+public:
+    Cilindro() : Figura("Cilindro"), radio(0), altura(0) {}
+    void setRadio(double r) { radio = r; }
+    void setAltura(double h) { altura = h; }
+    double calcularVolumen() const override { return M_PI * radio * radio * altura; }
+};
+
+class Cono : public Figura {
+private:
+    double radio, altura;
+public:
+    Cono() : Figura("Cono"), radio(0), altura(0) {}
+    void setRadio(double r) { radio = r; }
+    void setAltura(double h) { altura = h; }
+    double calcularVolumen() const override { return (M_PI * radio * radio * altura) / 3.0; }
+};
+
+class Esfera : public Figura {
+private:
+    double radio;
+public:
+    Esfera() : Figura("Esfera"), radio(0) {}
+    void setRadio(double r) { radio = r; }
+    double calcularVolumen() const override { return (4.0/3.0) * M_PI * radio * radio * radio; }
+};
+
+class Controlador {
+public:
+    void mostrarMenu() {
+        printf("\nVOLUMENES DE FIGURAS GEOMETRICAS:\n");
+        printf("1. CUBO\n");
+        printf("2. CILINDRO\n");
+        printf("3. CONO\n");
+        printf("4. ESFERA\n");
+        printf("5. FIN\n");
+    }
+
+    void procesarOpcion(int opcion) {
+        switch(opcion) {
+            case 1: calcularCubo(); break;
+            case 2: calcularCilindro(); break;
+            case 3: calcularCono(); break;
+            case 4: calcularEsfera(); break;
+            case 5: printf("Saliendo del programa.\n"); break;
+            default: printf("Opcion invalida. Intente de nuevo.\n");
+        }
+    }
+
+    void ejecutar() {
+        int opcion;
+        do {
+            mostrarMenu();
+            printf("ESCOGER OPCION: ");
+            scanf("%d", &opcion);
+            procesarOpcion(opcion);
+        } while(opcion != 5);
+    }
+
+private:
+    void calcularCubo() {
+        Cubo cubo;
+        double arista;
+        printf("Ingrese la arista del cubo: ");
+        scanf("%lf", &arista);
+        cubo.setArista(arista);
+        printf("El volumen del Cubo es: %.2f\n", cubo.calcularVolumen());
+    }
+
+    void calcularCilindro() {
+        Cilindro cilindro;
+        double radio, altura;
+        printf("Ingrese el radio del cilindro: ");
+        scanf("%lf", &radio);
+        printf("Ingrese la altura del cilindro: ");
+        scanf("%lf", &altura);
+        cilindro.setRadio(radio);
+        cilindro.setAltura(altura);
+        printf("El volumen del Cilindro es: %.2f\n", cilindro.calcularVolumen());
+    }
+
+    void calcularCono() {
+        Cono cono;
+        double radio, altura;
+        printf("Ingrese el radio del cono: ");
+        scanf("%lf", &radio);
+        printf("Ingrese la altura del cono: ");
+        scanf("%lf", &altura);
+        cono.setRadio(radio);
+        cono.setAltura(altura);
+        printf("El volumen del Cono es: %.2f\n", cono.calcularVolumen());
+    }
+
+    void calcularEsfera() {
+        Esfera esfera;
+        double radio;
+        printf("Ingrese el radio de la esfera: ");
+        scanf("%lf", &radio);
+        esfera.setRadio(radio);
+        printf("El volumen de la Esfera es: %.2f\n", esfera.calcularVolumen());
+    }
+};
+
+int main() {
+    Controlador controlador;
+    controlador.ejecutar();
+    return 0;
+}
