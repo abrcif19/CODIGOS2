@@ -1,0 +1,33 @@
+
+mySon =&DadsRoom; //t6ell mySon the address of Dad sRoom
+room =*mySon 
+void fn()
+
+int intVar;
+int* printVar;
+pinVar = &intVar;
+ *pintVar = 10;
+int* pintVar = &intVar:
+*pintVar = 10:
+double doubleVar:
+double* pdoubleVar = &doubleVar:
+*pdoubleVar = 10.0;
+int n1;
+int* pintVar ;
+pintVar = &n1;
+*pintVar = 100.0
+double doubleVar:
+double* pdoubleVar = &doubleVar:
+*pdoubleVar = 10.0;
+int n1;
+int* pintVar ;
+pintVar = &n1;
+*pintVar = 100.0
+int i Var 
+double dVar = 10.0
+i Var = (int)dVar
+int* piVar 
+double dVar = 10.0 :
+double* pdVar:
+piVar = (int*)pdVar:
+
