@@ -1,0 +1,29 @@
+#include <iostream>
+
+// 1 parÃ¡metro entero
+void test(int i) {
+    std::cout << "the int is " << i << '\n';
+}
+
+// 1 parÃ¡metro de punto flotante (double)
+void test(double f) {
+    std::cout << "the double is " << f << '\n';
+}
+
+// 1 parÃ¡metro cadena de caracteres (puntero a const char)
+void test(const char* ch) {
+    std::cout << "the char* is " << ch << '\n';
+}
+
+// 2 parÃ¡metros enteros
+void test(int a, int b) {
+    std::cout << "the two ints are " << a << " and " << b << '\n';
+}
+
+int main() {
+    test(5);        // â†’ test(int)
+    test(5, 5);     // â†’ test(int, int)
+    test("five");   // â†’ test(const char*)
+    test(3.1416);   // â†’ test(double)
+    return 0;
+}
